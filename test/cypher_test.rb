@@ -31,6 +31,11 @@ class CypherTest < Minitest::Test
     assert_equal @cypher.gen_rotation(12345), [12,23,34,45]
   end
 
+  def test_that_gen_key_is_five_digits
+    key = @cypher.gen_rand_key
+    assert_equal key.length, 5
+  end
+
   def test_that_today_returns_today
     assert_equal @cypher.today, Time.now.strftime("%d%m%y").to_i
   end
