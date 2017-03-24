@@ -44,4 +44,12 @@ class CypherTest < Minitest::Test
     assert_equal @cypher.gen_offset(@cypher.today), offset_test(@cypher.today)
   end
 
+  def test_that_string_array_from_num_returns_array_of_nums
+    assert_equal @cypher.string_array_from_num(1234), ["1","2","3","4"]
+  end
+
+  def test_that_num_array_from_strings_returns_array_of_nums
+    assert_equal @cypher.num_array_from_string('1234'), [1, 2, 3, 4]
+  end
+
 end

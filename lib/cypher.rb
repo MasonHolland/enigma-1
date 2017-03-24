@@ -25,7 +25,7 @@ class Cypher
 
   def gen_rotation(num = gen_rand_key)
     rotation = []
-    key = string_array_from(num)
+    key = string_array_from_num(num)
     if key.length == 5
       i = 0
       until i == key.length-1 do
@@ -39,18 +39,18 @@ class Cypher
   end
 
   def gen_offset(offset = today)
-    num_array_from((offset*offset).to_s[-4..-1])
+    num_array_from_string((offset*offset).to_s[-4..-1])
   end  
 
   def today
     Time.now.strftime("%d%m%y").to_i
   end
 
-  def string_array_from(num)
+  def string_array_from_num(num)
     num.to_s.split("")
   end
 
-  def num_array_from(string)
+  def num_array_from_string(string)
     string.split("").map { |char| char.to_i }
   end
 
