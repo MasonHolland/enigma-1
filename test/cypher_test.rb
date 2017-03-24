@@ -31,12 +31,25 @@ class CypherTest < Minitest::Test
     assert_equal @cypher.gen_rotation(12345), [12,23,34,45]
   end
 
+  def test_that_gen_key_is_five_digits
+    key = @cypher.gen_rand_key
+    assert_equal key.length, 5
+  end
+
   def test_that_today_returns_today
     assert_equal @cypher.today, Time.now.strftime("%d%m%y").to_i
   end
 
   def test_that_gen_offset_makes_offset
     assert_equal @cypher.gen_offset(@cypher.today), offset_test(@cypher.today)
+  end
+
+  def test_that_string_array_from_num_returns_array_of_nums
+    assert_equal @cypher.string_array_from_num(1234), ["1","2","3","4"]
+  end
+
+  def test_that_num_array_from_strings_returns_array_of_nums
+    assert_equal @cypher.num_array_from_string('1234'), [1, 2, 3, 4]
   end
 
 end
