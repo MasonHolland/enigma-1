@@ -14,7 +14,7 @@ class Cipher
   end
 
   def build_cipher(m_key)
-    alpha = ('a'..'z').to_a + ('A'..'Z').to_a + (' '..'@').to_a
+    alpha = ('a'..'z').to_a + ('A'..'Z').to_a + (' '..'@').to_a # Own Method?
     Hash[alpha.zip(alpha.rotate(m_key))]
   end
 
