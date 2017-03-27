@@ -34,6 +34,12 @@ class CipherTest < Minitest::Test
     assert_equal @cipher.build_cipher(4)['p'], 't'
   end
 
+  def test_that_it_flips_the_cipher
+    cipher = Cipher.new(12345, "071993")
+    cipher.flip
+    assert_equal cipher.char_map[0]['V'], 'H'
+  end
+
   def test_generate_returns_array_of_four_ciphers
     assert_equal @cipher.generate(12345, '013081').length, 4
     assert_instance_of  Hash, @cipher.generate(12345, '013081')[0]
