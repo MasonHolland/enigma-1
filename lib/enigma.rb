@@ -16,6 +16,10 @@ class Enigma
     Decrypt.new(message, cipher).message
   end
 
+  def crack(message, date = today)
+    Crack.new(message, date).message
+  end
+
   def today
     Time.now.strftime("%d%m%y").to_i
   end
