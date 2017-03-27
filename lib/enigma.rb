@@ -1,3 +1,7 @@
+require './lib/cipher'
+require './lib/encrypt'
+require './lib/decrypt'
+
 class Enigma
 
   attr_reader :cipher
@@ -7,7 +11,12 @@ class Enigma
 
   def encrypt(message, key = rand_key, date = today)
     cipher = Cipher.new(key, date)
-    cipher.char_map
+    Encrypt.new(message, cipher).message
+  end
+
+  def decrypt(message, key = rand_key, date = today)
+    cipher = Cipher.new(key, date)
+    Decrypt.new(message, cipher).message
   end
 
   def today
@@ -19,5 +28,7 @@ class Enigma
     4.times { key << rand(0..9).to_s }
     key.to_i
   end
+
+
 
 end

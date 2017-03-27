@@ -14,7 +14,7 @@ class Cipher
   end
 
   def build_cipher(m_key)
-    alpha = ('a'..'z').to_a + ('A'..'Z').to_a + (' '..'@').to_a # Own Method?
+    alpha = (' '..'z').to_a
     Hash[alpha.zip(alpha.rotate(m_key))]
   end
 
@@ -32,6 +32,12 @@ class Cipher
 
   def offsets(date)
     (date.to_i**2).to_s.split("")[-4..-1].map(&:to_i)
+  end
+
+  def flip
+    @char_map = char_map.map do |char|
+      char.invert
+    end
   end
 
 end
