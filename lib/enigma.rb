@@ -6,8 +6,8 @@ class Enigma
   end
 
   def encrypt(message, key = rand_key, date = today)
-    cipher = Cipher.new
-    cipher.generate(key, date)
+    cipher = Cipher.new(key, date)
+    cipher.char_map
   end
 
   def today

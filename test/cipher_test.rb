@@ -6,7 +6,7 @@ require './lib/cipher'
 class CipherTest < Minitest::Test
 
   def setup
-     @cipher = Cipher.new
+     @cipher = Cipher.new(12345, '013081')
   end
 
   def test_that_it_is_a_cypher
@@ -21,17 +21,17 @@ class CipherTest < Minitest::Test
     assert_equal @cipher.offsets('013081'), [2, 5, 6, 1]
   end
 
-  def test_combine_sums_each_element_of_offsets_and_rotations_together
+  def test_combined_sums_each_element_of_offsets_and_rotations_together
     rotations = @cipher.rotations(12345)
     offsets = @cipher.offsets('013081')
-    assert_equal @cipher.combine(rotations, offsets), [14, 28, 40, 46]
+    assert_equal @cipher.combined(rotations, offsets), [14, 28, 40, 46]
   end
 
-  def test_cipher_matches_value_to_key_based_on_offset
-    assert_equal @cipher.cipher(1)['A'], 'B'
-    assert_equal @cipher.cipher(2)['a'], 'c'
-    assert_equal @cipher.cipher(3)['K'], 'N'
-    assert_equal @cipher.cipher(4)['p'], 't'
+  def test_build_cipher_matches_value_to_key_based_on_offset
+    assert_equal @cipher.build_cipher(1)['A'], 'B'
+    assert_equal @cipher.build_cipher(2)['a'], 'c'
+    assert_equal @cipher.build_cipher(3)['K'], 'N'
+    assert_equal @cipher.build_cipher(4)['p'], 't'
   end
 
   def test_generate_returns_array_of_four_ciphers
