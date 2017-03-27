@@ -19,7 +19,7 @@ class EncryptTest < Minitest::Test
 
   def test_that_it_encrypts
     new_encryption = Encrypt.new(@message, @cipher)
-    assert_equal "VBX-C7b0FIPw", new_encryption.message
+    assert_equal "V!7G\"7\"J%(/W", new_encryption.message
   end
 
 end
