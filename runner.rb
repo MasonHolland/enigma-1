@@ -1,5 +1,6 @@
-require_relative "lib/cypher"
+require_relative "lib/cipher"
+require_relative "lib/enigma"
 
-cypher = Cypher.new
+e = Enigma.new
 
-print cypher.generate(12345)
+e.encrypt("Hello").each { |cipher| puts cipher }
