@@ -7,7 +7,7 @@ class Enigma
 
   def encrypt(message, key = rand_key, date = today)
     cipher = Cipher.new(key, date)
-    cipher.char_map
+    Encrypt.new(message, cipher).message
   end
 
   def today
