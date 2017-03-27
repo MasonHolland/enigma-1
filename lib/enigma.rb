@@ -6,9 +6,6 @@ class Enigma
 
   attr_reader :cipher
 
-  def initialize
-  end
-
   def encrypt(message, key = rand_key, date = today)
     cipher = Cipher.new(key, date)
     Encrypt.new(message, cipher).message
@@ -29,6 +26,12 @@ class Enigma
     key.to_i
   end
 
+  def read_message(read_name)
+    File.open(read_name, 'r') { |f| f.read}
+  end
 
+  def write_message(message, write_name)
+    File.open(write_name, 'w') {|f| f.write(message)}
+  end
 
 end
