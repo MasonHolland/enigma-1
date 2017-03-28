@@ -1,8 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require './lib/enigma'
-require './lib/cipher'
+require './test/test_helper.rb'
 
 class EnigmaTest < Minitest::Test
 

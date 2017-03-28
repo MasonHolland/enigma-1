@@ -1,6 +1,4 @@
-require './lib/cipher'
-require './lib/encrypt'
-require './lib/decrypt'
+require './lib/helper'
 
 class Enigma
 

@@ -1,3 +1,5 @@
+require './lib/helper'
+
 class Decrypt
   attr_reader :message
 

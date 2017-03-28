@@ -1,5 +1,4 @@
-require 'pry'
-require './lib/enigma'
+require './lib/helper'
 
 class Crack
 

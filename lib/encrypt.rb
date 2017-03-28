@@ -1,3 +1,5 @@
+require './lib/helper'
+
 class Encrypt
 attr_reader :message
 

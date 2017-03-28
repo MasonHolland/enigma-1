@@ -1,10 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require './lib/enigma'
-require './lib/cipher'
-require './lib/encrypt'
-require './lib/crack'
+require './test/test_helper.rb'
 
 class CrackTest < Minitest::Test
 

@@ -1,7 +1,4 @@
-require 'minitest/autorun'
-require 'minitest/pride'
-
-require './lib/cipher'
+require './test/test_helper.rb'
 
 class CipherTest < Minitest::Test
 
