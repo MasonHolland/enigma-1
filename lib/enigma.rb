@@ -15,7 +15,7 @@ class Enigma
   end
 
   def crack(message, date = today)
-    Crack.new(message, date).message
+    Crack.new(message, date)
   end
 
   def today
@@ -29,7 +29,7 @@ class Enigma
   end
 
   def read_message(read_name)
-    File.open(read_name, 'r') { |f| f.read}
+    (File.open(read_name, 'r') { |f| f.read}).chomp
   end
 
   def write_message(message, write_name)
