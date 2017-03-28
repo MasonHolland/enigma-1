@@ -1,0 +1,73 @@
+#Project: Enigma
+
+Group Member Names: Mason Holland and Aaron Olsen
+
+Project Expectations: What does each group member hope to get out of this project?
+
+Mason: I hope to learn and feel good about the code I've written. I would also love to comprehend recursion and a few more enumerables.
+
+Aaron: I hope that I learn something and feel good about. I have no interest in encryption but I think it will be fascinating anyway.
+
+Goals and expectations:
+
+Aaron: At least get 3's on everything. Finish the project and time to refactor.
+
+Mason: Finish in good time and feel good about the code I have written. Also would love to have time to refactor.
+
+Team strengths:
+
+Aaron: Responsibility, achiever, learner, ideation and relator.
+
+Mason: Communication, positivity, input and honesty.
+
+How to overcome obstacles:
+
+Aaron: Not yet.
+
+Mason: Persevere and don't be afraid to ask for help.
+
+Schedule Expectations (When are we available to work together and individually?):
+
+Aaron: 1 day busy
+
+Mason: 2 or 3 Days busy but happy to spend all next week as long as we need.
+
+Communication Expectations (How and often will we communicate? How do we keep lines of communication open?):
+
+Aaron: As long as we do what we say we will do and if we can't we communicate it.
+
+Mason: Daily and as needed.
+
+Abilities Expectations (Technical strengths and areas for desired improvement):
+
+Aaron: Clean code, good mindset, hard work. Testing to be improved.
+
+Mason: Good sounding board. Lots to improve upon.
+
+Workload Expectations (What features do we each want to work on?):
+
+Aaron: Had more time, worked together for the most part.
+
+Mason: Not a lot of time, worked together for the most part.
+
+Workflow Expectations (Git workflow/Tools/Code Review/Reviewing Pull Requests):
+
+Aaron: Side by side for reviews.
+
+Mason: Side by side for reviews.
+
+Expectations for giving and receiving feedback:
+
+Open communication.
+
+Agenda to discuss project launch:
+
+N/A
+
+Ideas:
+
+Using the pre work to build upon the hash cipher.
+
+Tools:
+
+Minitest, TDD, SimpleCov, and pry/irb.
