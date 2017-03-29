@@ -1,5 +1,5 @@
 require './lib/helper'
-
+require 'pry'
 class Crack
 
   attr_reader :key, :message
