@@ -1,6 +1,7 @@
 require './lib/helper'
 
 class Decrypt
+  
   attr_reader :message
 
   def initialize(message, cipher)

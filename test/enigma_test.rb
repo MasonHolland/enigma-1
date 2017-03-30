@@ -22,4 +22,17 @@ class EnigmaTest < Minitest::Test
     assert_instance_of Fixnum, key
   end
 
+  def test_that_it_loads_file
+    file = './test/test_message.txt'
+    assert_equal @enigma.read_message(file), "Hello World! ..end.."
+  end
+
+  def test_that_it_writes_file
+    @enigma.write_message('This is a Test!', 'write_test.txt')
+    assert File.exist?('write_test.txt')
+    file = @enigma.read_message('write_test.txt')
+    assert_equal file, 'This is a Test!'
+    File.delete('write_test.txt')
+  end
+
 end

@@ -1,7 +1,8 @@
 require './lib/helper'
 
 class Encrypt
-attr_reader :message
+
+  attr_reader :message
 
   def initialize(message, cipher)
     @message = lock(message, cipher)

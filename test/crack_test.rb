@@ -19,13 +19,18 @@ class CrackTest < Minitest::Test
     assert_equal crack.key, 10001
   end
 
+  def test_that_it_does_not_loop_forever
+    refute Crack.new("Hello", @date, '..end..').message
+  end
+
   def test_that_it_finds_key_word
     crack = Crack.new(@encrypted, @date, '..end..').message
     assert crack.include?('..end..')
   end
 
-  def test_that_it_does_not_loop_forever
-    refute Crack.new("Hello", @date, '..end..').message
+  def test_that_it_cracks_encrypted_message
+    crack = Crack.new(@encrypted, @date).message
+    assert_equal crack, @message
   end
 
 end
